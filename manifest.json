@@ -1,1 +1,13 @@
-{"name":"Mon Cap","short_name":"Mon Cap","start_url":"./index.html","display":"standalone","background_color":"#0f172a","theme_color":"#0f172a","icons":[]}
+{
+  "name":"Mon Cap — Discipline",
+  "short_name":"Mon Cap",
+  "description":"Objectifs, actions, progression et journal privé.",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"portrait-primary",
+  "background_color":"#090b10",
+  "theme_color":"#090b10",
+  "categories":["productivity","lifestyle"],
+  "icons":[]
+}

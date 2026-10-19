@@ -1,13 +1,71 @@
-<!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0f172a">
-<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
-<title>Mon Cap</title></head><body>
-<div id="lock" class="hidden"><div class="card"><h1>Mon Cap</h1><p id="lockMsg"></p>
-<input id="pin" type="password" inputmode="numeric" placeholder="Code PIN"><button id="pinBtn">Entrer</button></div></div>
-<main id="app" class="hidden"><div id="view"></div></main>
-<nav id="nav" class="hidden">
-<button data-v="today">Aujourd'hui</button><button data-v="goals">Objectifs</button>
-<button data-v="week">Semaine</button><button data-v="journal">Journal</button><button data-v="settings">Réglages</button></nav>
-<script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Mon Cap — transforme tes intentions en actions.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+  <title>Mon Cap</title>
+</head>
+<body>
+  <a class="skip-link" href="#view">Aller au contenu</a>
+  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <section id="lock" class="lock hidden" aria-labelledby="lockTitle">
+    <div class="lock-card">
+      <div class="brand-mark" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">ESPACE PRIVÉ</p>
+      <h1 id="lockTitle">Mon Cap</h1>
+      <p id="lockMsg" class="muted"></p>
+      <label class="sr-only" for="pin">Code PIN</label>
+      <input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Code PIN">
+      <button id="pinBtn" class="btn primary wide">Entrer</button>
+      <p class="privacy-note">Tes données restent sur cet appareil.</p>
+    </div>
+  </section>
+
+  <div id="shell" class="hidden">
+    <header class="app-header">
+      <a class="brand" href="#today" data-nav="today" aria-label="Accueil Mon Cap">
+        <span class="brand-mark small" aria-hidden="true"><span></span></span>
+        <span>MON CAP</span>
+      </a>
+      <div class="header-progress">
+        <span id="levelBadge">NIV. 1</span>
+        <div class="mini-xp" aria-hidden="true"><i id="headerXp"></i></div>
+      </div>
+    </header>
+
+    <main id="app"><div id="view" tabindex="-1"></div></main>
+
+    <nav id="nav" class="bottom-nav" aria-label="Navigation principale">
+      <button data-v="today" aria-label="Aujourd'hui"><span class="nav-icon">⌂</span><span>Aujourd'hui</span></button>
+      <button data-v="goals" aria-label="Objectifs"><span class="nav-icon">◎</span><span>Objectifs</span></button>
+      <button data-v="week" aria-label="Semaine"><span class="nav-icon">▦</span><span>Semaine</span></button>
+      <button data-v="journal" aria-label="Journal"><span class="nav-icon">✎</span><span>Journal</span></button>
+      <button data-v="profile" aria-label="Progression"><span class="nav-icon">◇</span><span>Progression</span></button>
+    </nav>
+  </div>
+
+  <div id="celebration" class="celebration hidden" role="status" aria-live="polite">
+    <canvas id="confetti"></canvas>
+    <div class="celebration-card">
+      <p class="eyebrow">PROGRESSION</p>
+      <div class="reward-orb">+</div>
+      <h2 id="celebrationTitle">Bien joué</h2>
+      <p id="celebrationXp"></p>
+      <button class="btn primary" onclick="closeCelebration()">Continuer</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"></script>
+  <script defer src="app.js?v=3"></script>
+</body>
+</html>
