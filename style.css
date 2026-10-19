@@ -1,0 +1,14 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0}
+.hidden{display:none!important}main{padding:16px 16px 90px;max-width:640px;margin:auto}
+h1,h2,h3{margin:.4em 0}.card{background:#1e293b;border-radius:14px;padding:14px;margin:12px 0}
+#lock{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:16px}#lock .card{width:100%;max-width:340px}
+input,textarea,select{width:100%;padding:10px;margin:6px 0;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#e2e8f0;font-size:16px}
+textarea{min-height:70px}button{background:#3b82f6;color:#fff;border:0;border-radius:10px;padding:10px 14px;font-size:15px;margin:4px 4px 4px 0}
+button.sec{background:#334155}button.del{background:#b91c1c;padding:6px 10px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#111827;padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;border-radius:0;background:transparent;margin:0;padding:14px 2px;font-size:12px;color:#94a3b8}
+nav button.on{color:#fff;border-top:2px solid #3b82f6}
+.row{display:flex;align-items:center;gap:8px;padding:6px 0}.row input[type=checkbox]{width:22px;height:22px;margin:0}
+.done span{text-decoration:line-through;opacity:.5}.row span{flex:1}.muted{color:#94a3b8;font-size:14px}
+.warn{background:#7c2d12}.bar{height:8px;background:#334155;border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:#22c55e}
+.big{font-size:32px;font-weight:700}

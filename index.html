@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>Mon Cap</title></head><body>
+<div id="lock" class="hidden"><div class="card"><h1>Mon Cap</h1><p id="lockMsg"></p>
+<input id="pin" type="password" inputmode="numeric" placeholder="Code PIN"><button id="pinBtn">Entrer</button></div></div>
+<main id="app" class="hidden"><div id="view"></div></main>
+<nav id="nav" class="hidden">
+<button data-v="today">Aujourd'hui</button><button data-v="goals">Objectifs</button>
+<button data-v="week">Semaine</button><button data-v="journal">Journal</button><button data-v="settings">Réglages</button></nav>
+<script src="app.js"></script></body></html>
