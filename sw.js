@@ -1,5 +1,5 @@
-const CACHE='moncap-v3';
-const CORE=['./','./index.html','./style.css?v=3','./app.js?v=3','./manifest.json'];
+const CACHE='moncap-v4';
+const CORE=['./','./index.html','./style.css?v=3','./app.js?v=4','./manifest.json'];
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE))) });
 self.addEventListener('activate',event=>event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));
 self.addEventListener('fetch',event=>{
